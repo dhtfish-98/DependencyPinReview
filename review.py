@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 
 NAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*(?:\[[A-Za-z0-9,._-]+\])?")
-EXACT = re.compile(r"(?<![<>=!~])==(?!=)[^\s,;]+")
+EXACT = re.compile(r"==[^<>=!~,;\s]+")
 
 
 def review_text(text: str) -> list[dict[str, str]]:
@@ -31,6 +31,7 @@ def review_text(text: str) -> list[dict[str, str]]:
         remainder = line[name.end():].strip()
         if remainder.startswith(";"):
             remainder = ""
-        if not EXACT.search(remainder):
+        specifier = remainder.split(";", 1)[0].split("#", 1)[0].strip()
+        if not EXACT.fullmatch(specifier):
             findings.append({"rule": "not-exactly-pinned", "location": location, "note": "Direct requirement lacks a single exact version"})
     return findings
