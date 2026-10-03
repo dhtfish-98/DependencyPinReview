@@ -1,0 +1,30 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "DependencyPinReview",
+  "author": "dhtfish98",
+  "kind": "manual",
+  "base_public_commit": "c06cc7f35accaf244fda0eed98c1b2b2b0f2b994",
+  "restored_inputs": [
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "61cc81f0067016c9425160ac683a0791c1f9332a48ffe655d21b2602286e21be"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "10ca3ffdbfdb4c2ff1120339237a2da9d27fa1295f20535457ce61b6d9e8793f"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "db5a56192978d39ea3554993999f6d73d7350eafd5a9c50fc41e90f31728cde7"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "c1b063f23031db2dcc9a116d12fb869c96e47e7a02237eae703cee57d7906da7"
+    }
+  ],
+  "platform_entries": []
+}
